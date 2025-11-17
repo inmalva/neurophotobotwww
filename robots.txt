@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Allow access to all pages
+Disallow: 
+
+# Sitemap location
+Sitemap: https://yourdomain.github.io/neurofoto/sitemap.xml

@@ -1,0 +1,783 @@
+/* ====== STATIC WEBSITE STYLES ====== */
+/* Combined styles for the static NeuroPhoto Bot website */
+
+/* ====== БАЗОВІ ЗМІННІ ====== */
+:root {
+  --bg: #000;
+  --surface: #1c1c1e;
+  --text: #fff;
+  --muted: #a1a1aa;
+  --border: #262626;
+  --cta-bg: #ffe4c4;
+  --cta-fg: #000;
+  --cta-hover: #ffd7b0;
+  --cta-shadow: 0 8px 20px rgba(255,228,196,.18);
+  --nav-h: 88px;
+  --accent-color: #f5d8b9;
+  --bg-dark: #000000;
+  --text-light: #f5d8b9;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+}
+
+/* ====== БАЗОВИЙ RESET ====== */
+* { 
+  box-sizing: border-box; 
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ====== НАВІГАЦІЯ ====== */
+.navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  margin-bottom: 24px;
+}
+
+.navbar .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cta-bg);
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--cta-bg);
+}
+
+/* Mobile navbar */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+}
+
+/* ====== ЗАГАЛЬНІ СТИЛІ КОНТЕЙНЕРА ====== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  min-height: calc(100vh - 120px);
+}
+
+/* Responsive container widths */
+@media (min-width: 768px) {
+  .page-content {
+    max-width: 700px;
+    padding: 40px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-content {
+    max-width: 900px;
+    padding: 48px 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-content {
+    max-width: 1100px;
+    padding: 56px 40px;
+  }
+}
+
+/* ====== БАЗОВІ СТИЛІ ЗАГОЛОВКІВ ====== */
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: var(--cta-bg);
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ====== БАЗОВІ КНОПКИ ====== */
+.primary-btn, .create-btn, .cta-btn {
+  display: block;
+  background-color: var(--cta-bg);
+  color: var(--cta-fg);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  padding: 14px 24px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--cta-shadow);
+  text-decoration: none;
+  text-align: center;
+}
+
+.primary-btn:hover, .create-btn:hover, .cta-btn:hover {
+  background-color: var(--cta-hover);
+}
+
+/* ====== УНІВЕРСАЛЬНІ СТИЛІ ДЛЯ КНОПОК ПОВЕРНЕННЯ ====== */
+.back-btn, .back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #222;
+  color: white;
+  border: 1px solid var(--text-light);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-btn:focus, .back-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--text-light, #f5d8b9);
+}
+
+.back-btn:hover, .back-button:hover {
+  background-color: #333;
+  text-decoration: none;
+}
+
+/* ====== LANDING PAGE STYLES ====== */
+.landing-page {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.landing-header h1 {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  color: var(--cta-bg);
+  font-weight: 700;
+}
+
+.landing-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.company-info {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.info-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .landing-page {
+    max-width: 700px;
+    padding: 40px 24px;
+  }
+  
+  .landing-header h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .landing-subtitle {
+    font-size: 18px;
+  }
+  
+  .company-info {
+    padding: 24px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-page {
+    max-width: 900px;
+    padding: 48px 32px;
+  }
+  
+  .landing-header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .landing-subtitle {
+    font-size: 20px;
+  }
+  
+  .landing-content {
+    gap: 32px;
+  }
+  
+  .company-info {
+    padding: 28px 32px;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing-page {
+    max-width: 1100px;
+    padding: 56px 40px;
+  }
+}
+
+.info-item {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.info-item strong {
+  color: var(--cta-bg);
+  font-weight: 600;
+}
+
+.info-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-item a:hover {
+  color: var(--cta-bg);
+  text-decoration: underline;
+}
+
+.content-section {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .content-section {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-section {
+    padding: 28px 32px;
+  }
+}
+
+.content-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.content-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px 0;
+}
+
+.content-section p:last-child {
+  margin-bottom: 0;
+}
+
+.content-section ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.content-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.content-section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.content-section a:hover {
+  color: var(--cta-bg);
+  text-decoration: underline;
+}
+
+.legal-documents {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .legal-documents {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .legal-documents {
+    padding: 28px 32px;
+  }
+  
+  .legal-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+  }
+  
+  .legal-card {
+    margin-bottom: 0;
+  }
+}
+
+.legal-documents h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-card {
+  margin-bottom: 16px;
+}
+
+.legal-card:last-child {
+  margin-bottom: 0;
+}
+
+.legal-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 0 0 12px 0;
+}
+
+.legal-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px 0;
+}
+
+.legal-card ul {
+  margin: 12px 0 16px 0;
+  padding-left: 20px;
+}
+
+.legal-card li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.legal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--cta-bg);
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.legal-link:hover {
+  background: var(--border);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.contact-info {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-info p:last-child {
+  border-bottom: none;
+}
+
+.contact-info strong {
+  color: var(--cta-bg);
+  font-weight: 600;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--cta-bg);
+  text-decoration: underline;
+}
+
+.cta-section {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .cta-section {
+    padding: 32px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-section {
+    padding: 40px 32px;
+    margin-top: 16px;
+  }
+}
+
+.cta-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 0 0 12px 0;
+}
+
+.cta-section p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cta-bg);
+  color: var(--cta-fg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 32px;
+  padding: 14px 24px;
+  transition: all 0.2s ease;
+  box-shadow: var(--cta-shadow);
+}
+
+.cta-button:hover {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ====== LEGAL PAGES STYLES ====== */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  color: var(--cta-bg);
+  font-weight: 700;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.info-block {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.info-block p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 8px 0;
+}
+
+.info-block p:last-child {
+  margin-bottom: 0;
+}
+
+.info-block strong {
+  color: var(--cta-bg);
+  font-weight: 600;
+}
+
+.info-block a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-block a:hover {
+  color: var(--cta-bg);
+  text-decoration: underline;
+}
+
+section {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 28px 32px;
+  }
+}
+
+section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cta-bg);
+  margin: 20px 0 12px 0;
+}
+
+section h3:first-of-type {
+  margin-top: 0;
+}
+
+section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px 0;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+section a:hover {
+  color: var(--cta-bg);
+  text-decoration: underline;
+}
+
+section strong {
+  color: var(--cta-bg);
+  font-weight: 600;
+}
+
+/* ====== ABOUT PAGE SPECIFIC ====== */
+
+.about-content {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.legal-doc {
+  margin: 24px 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border-left: 4px solid var(--cta-bg);
+}
+
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: var(--surface);
+  color: var(--cta-bg);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.doc-link:hover {
+  background: var(--border);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ====== RESPONSIVE ADJUSTMENTS ====== */
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 16px 12px;
+  }
+  
+  .company-info,
+  .content-section,
+  .legal-documents,
+  .cta-section,
+  section,
+  .info-block,
+  .about-content {
+    padding: 16px;
+  }
+  
+  .legal-card {
+    padding: 12px;
+  }
+  
+  h1 {
+    font-size: 22px;
+  }
+  
+  .landing-subtitle {
+    font-size: 14px;
+  }
+  
+  .navbar .container {
+    padding: 0 12px;
+  }
+}
