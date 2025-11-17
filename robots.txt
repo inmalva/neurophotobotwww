@@ -1,8 +1,17 @@
 User-agent: *
-Allow: /
+# Allow only index homepage
+Allow: /index.html
+Allow: /$
 
-# Allow access to all pages
-Disallow: 
+# Explicitly disallow all other pages to force de-indexing
+Disallow: /about.html
+Disallow: /terms.html
+Disallow: /privacy.html
+Disallow: /refund.html
+Disallow: /404.html
+
+# Disallow everything else
+Disallow: /
 
 # Sitemap location
 Sitemap: https://yourdomain.github.io/neurofoto/sitemap.xml

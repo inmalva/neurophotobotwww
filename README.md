@@ -1,10 +1,10 @@
-# NeuroPhoto Bot - Static Website
+# NeuroPhotoBot - Static Website
 
-This is the static website for NeuroPhoto Bot, hosted on GitHub Pages.
+This is the static website for NeuroPhotoBot, hosted on GitHub Pages.
 
 ## About
 
-NeuroPhoto Bot is a Telegram Mini App that provides AI-powered personalized photo generation services. This website contains information about the service and legal documents.
+NeuroPhotoBot is a Telegram Mini App that provides AI-powered personalized photo generation services. This website contains information about the service and legal documents.
 
 ## Live Website
 

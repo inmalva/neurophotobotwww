@@ -1,6 +1,6 @@
 # GitHub Pages Deployment Guide
 
-This guide will help you deploy your NeuroPhoto Bot static website to GitHub Pages.
+This guide will help you deploy your NeuroPhotoBot static website to GitHub Pages.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ For a cleaner URL and better organization:
    git add .
    
    # Commit files
-   git commit -m "Initial commit: NeuroPhoto Bot static website"
+   git commit -m "Initial commit: NeuroPhotoBot static website"
    
    # Add your new repository as remote
    git remote add origin https://github.com/ironpercival/neurofoto-website.git
